@@ -192,25 +192,37 @@
 // const cp3 = "https://www.balldontlie.io/api/v1/players/367"
 // const luka = "https://www.balldontlie.io/api/v1/players/132"
 
-const URL = "https://www.balldontlie.io/api/v1/players/132"
+const URL = "https://www.balldontlie.io/api/v1/players/666786"
 
 // Cached Elements --------
 
 const $getPlayerInfo = $("#getPlayerInfo");
 const $playerName = $("#playerName");
-const $playerData = $("#playerData");
+const $playerPosition = $(".position");
+const $playerTeam = $(".team")
+const $playerConference = $(".conference");
+const $playerHeight = $(".height");
+const $playerWeight = $(".weight");
 const $playerDesc = $("#playerDesc");
+const $form = $("form");
 
-// get API data --------
+// get API data (Functions) --------
 
-function getInfo() {
+function getInfo(event) {
+    event.preventDefault();
 $.ajax(URL).then(function(data) {
-    $("#playerName").text(data.first_name + data.last_name);
-    $("#playerData").text(data.position + data.height_feet + data.height_inches)
-    $('#playerDesc').append();
-})
+    $("#playerName").text(data.first_name + " " + data.last_name);
+    $(".position").text("Position: " + data.position);
+    $(".team").text("Team: " + data.team.full_name);
+    $(".conference").text("Conference: " + data.team.conference);
+    $(".height").text("Height: " + data.height_feet + "'" + " " + data.height_inches + "'' ");
+    $(".weight").text("Weight: " + data.weight_pounds);
+    // $('#playerDesc').text(description);
+    })
 }
 
 // Event Listener --------
 
 $getPlayerInfo.on("click", getInfo);
+$form.on("#button", getInfo);
+
