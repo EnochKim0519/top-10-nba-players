@@ -1,13 +1,11 @@
-// const apiData = [
+// data that I want to use from the API
 // 	{
-// 		"ranking": "1st",
 // 		"id": 666786,
 // 		"first_name": "Ja",
 // 		"height_feet": 6,
 // 		"height_inches": 3,
 // 		"weight_pounds": 174,
 // 		"last_name": "Morant",
-//         "PER": 24.53,
 // 		"position": "G",
 // 		"team": {
 // 			"id": 15,
@@ -20,14 +18,12 @@
 // 		},
 // 	},
 // 	{
-// 		"ranking": "2nd",
 // 		"id": 15,
 // 		"first_name": "Giannis",
 // 		"height_feet": 6,
 // 		"height_inches": 11,
 // 		"weight_pounds": 242,
 // 		"last_name": "Antetokounmpo",
-//         "PER": 32.1,
 // 		"position": "F",
 // 		"team": {
 // 			"id": 17,
@@ -40,14 +36,12 @@
 // 		},
 // 	},
 // 	{
-// 		"ranking": "3rd",
 // 		"id": 246,
 // 		"first_name": "Nikola",
 // 		"height_feet": 7,
 // 		"height_inches": 0,
 // 		"weight_pounds": 250,
 // 		"last_name": "Jokic",
-//         "PER": 32.8,
 // 		"position": "C",
 // 		"team": {
 // 			"id": 8,
@@ -60,14 +54,12 @@
 // 		},
 // 	},
 // 	{
-// 		"ranking": "4th",
 // 		"id": 237,
 // 		"first_name": "LeBron",
 // 		"height_feet": 6,
 // 		"height_inches": 8,
 // 		"weight_pounds": 250,
 // 		"last_name": "James",
-//         "PER": 26.2,
 // 		"position": "F",
 // 		"team": {
 // 			"id": 14,
@@ -80,14 +72,12 @@
 // 		},
 // 	},
 // 	{
-// 		"ranking": "5th",
 // 		"id": 145,
 // 		"first_name": "Joel",
 // 		"height_feet": 7,
 // 		"height_inches": 0,
 // 		"weight_pounds": 250,
 // 		"last_name": "Embiid",
-//         "PER": 31.24,
 // 		"position": "F-C",
 // 		"team": {
 // 			"id": 23,
@@ -100,14 +90,12 @@
 // 		},
 // 	},
 // 	{
-// 		"ranking": "6th",
 // 		"id": 57,
 // 		"first_name": "Devin",
 // 		"height_feet": 6,
 // 		"height_inches": 6,
 // 		"weight_pounds": 210,
 // 		"last_name": "Booker",
-//         "PER": 21.3,
 // 		"position": "G",
 // 		"team": {
 // 			"id": 24,
@@ -120,14 +108,12 @@
 // 		},
 // 	},
 // 	{
-// 		"ranking": "7th",
 // 		"id": 115,
 // 		"first_name": "Stephen",
 // 		"height_feet": 6,
 // 		"height_inches": 3,
 // 		"weight_pounds": 190,
 // 		"last_name": "Curry",
-//         "PER": 21.4,
 // 		"position": "G",
 // 		"team": {
 // 			"id": 10,
@@ -140,14 +126,12 @@
 // 		},
 // 	},
 // 	{
-// 		"ranking": "8th",
 // 		"id": 434,
 // 		"first_name": "Jayson",
 // 		"height_feet": 6,
 // 		"height_inches": 8,
 // 		"weight_pounds": 208,
 // 		"last_name": "Tatum",
-//         "PER": 21.8,
 // 		"position": "F",
 // 		"team": {
 // 			"id": 2,
@@ -160,14 +144,12 @@
 // 		},
 // 	},
 //     {
-//         "ranking": "9th",
 // 		"id": 367,
 // 		"first_name": "Chris",
 // 		"height_feet": 6,
 // 		"height_inches": 0,
-//         "weight_pounds": 175,
+//      "weight_pounds": 175,
 // 		"last_name": "Paul",
-//         "PER": 20.8,
 // 		"position": "G",
 // 		"team": {
 // 			"id": 24,
@@ -180,14 +162,12 @@
 // 		},
 // 	},
 // 	{
-// 		"ranking": "10th",
 // 		"id": 132,
 // 		"first_name": "Luka",
 // 		"height_feet": 6,
 // 		"height_inches": 7,
 // 		"weight_pounds": 218,
 // 		"last_name": "Doncic",
-//         "PER": 25.1,
 // 		"position": "F-G",
 // 		"team": {
 // 			"id": 7,
@@ -200,19 +180,37 @@
 // 		},
 // 	},
 // ]
-const URL = "https://www.balldontlie.io/api/v1/players"
 
-// Cached Elements
+// const ja = "https://www.balldontlie.io/api/v1/players/666786"
+// const giannis = "https://www.balldontlie.io/api/v1/players/15"
+// const jokic = "https://www.balldontlie.io/api/v1/players/246"
+// const leBron = "https://www.balldontlie.io/api/v1/players/237"
+// const joel = "https://www.balldontlie.io/api/v1/players/145"
+// const booker = "https://www.balldontlie.io/api/v1/players/57"
+// const curry = "https://www.balldontlie.io/api/v1/players/115"
+// const tatum = "https://www.balldontlie.io/api/v1/players/434"
+// const cp3 = "https://www.balldontlie.io/api/v1/players/367"
+// const luka = "https://www.balldontlie.io/api/v1/players/132"
+
+const URL = "https://www.balldontlie.io/api/v1/players/132"
+
+// Cached Elements --------
 
 const $getPlayerInfo = $("#getPlayerInfo");
 const $playerName = $("#playerName");
 const $playerData = $("#playerData");
 const $playerDesc = $("#playerDesc");
 
-// get API data
-function getInfo() {
+// get API data --------
 
+function getInfo() {
+$.ajax(URL).then(function(data) {
+    $("#playerName").text(data.first_name + data.last_name);
+    $("#playerData").text(data.position + data.height_feet + data.height_inches)
+    $('#playerDesc').append();
+})
 }
 
-// Event Listener
+// Event Listener --------
+
 $getPlayerInfo.on("click", getInfo);
