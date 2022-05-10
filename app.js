@@ -226,3 +226,4 @@ $.ajax(URL).then(function(data) {
 $getPlayerInfo.on("click", getInfo);
 $form.on("#button", getInfo);
 
+
