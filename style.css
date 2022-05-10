@@ -3,16 +3,46 @@ h1 {
     text-align: center;
     border-radius: 8px;
     border-width: 4px;
-    
+    background-color: rgb(255, 187, 34);
 }
 
 #getPlayerInfo {
-    position: relative;
-    top: 650px;
-    left: 315px;
+    border-radius: 8px;
+    border-width: 4px;
+    background-color: rgb(18, 23, 63);
+}
+
+body {
+    background-color: rgb(93, 118, 169);
 }
 
 button {
-    height: 30px;
-    width: 300px;
+    height: 40px;
+    color: beige;
+}
+
+h2 {
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 4px;
+    height: 60px;
+}
+
+ul {
+    border-style: solid;
+    height: 200px;
+    border-radius: 8px;
+    border-width: 4px;
+}
+
+p {
+    border-style: solid;
+    height: 250px;
+    border-radius: 8px;
+    border-width: 4px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 }
