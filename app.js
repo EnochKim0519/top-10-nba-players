@@ -205,12 +205,13 @@ const URL = "https://www.balldontlie.io/api/v1/players"
 // Cached Elements
 
 const $getPlayerInfo = $("#getPlayerInfo");
+const $playerName = $("#playerName");
+const $playerData = $("#playerData");
+const $playerDesc = $("#playerDesc");
 
 // get API data
 function getInfo() {
-const randomIndex = Math.floor(Math.random * apiData.length);
-const player = apiData[randomIndex];
-console.log(player);
+
 }
 
 // Event Listener
