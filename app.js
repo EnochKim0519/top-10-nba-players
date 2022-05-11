@@ -228,5 +228,3 @@ $form.on("#button", getInfo);
 
 
 
-
-
