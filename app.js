@@ -227,3 +227,6 @@ $getPlayerInfo.on("click", getInfo);
 $form.on("#button", getInfo);
 
 
+
+
+
