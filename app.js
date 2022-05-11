@@ -181,23 +181,25 @@
 // 	},
 // ]
 
-// const ja = "https://www.balldontlie.io/api/v1/players/666786"
-// const giannis = "https://www.balldontlie.io/api/v1/players/15"
-// const jokic = "https://www.balldontlie.io/api/v1/players/246"
-// const leBron = "https://www.balldontlie.io/api/v1/players/237"
-// const joel = "https://www.balldontlie.io/api/v1/players/145"
-// const booker = "https://www.balldontlie.io/api/v1/players/57"
-// const curry = "https://www.balldontlie.io/api/v1/players/115"
-// const tatum = "https://www.balldontlie.io/api/v1/players/434"
-// const cp3 = "https://www.balldontlie.io/api/v1/players/367"
-// const luka = "https://www.balldontlie.io/api/v1/players/132"
+const ja = "https://www.balldontlie.io/api/v1/players/666786"
+const giannis = "https://www.balldontlie.io/api/v1/players/15"
+const jokic = "https://www.balldontlie.io/api/v1/players/246"
+const leBron = "https://www.balldontlie.io/api/v1/players/237"
+const joel = "https://www.balldontlie.io/api/v1/players/145"
+const booker = "https://www.balldontlie.io/api/v1/players/57"
+const curry = "https://www.balldontlie.io/api/v1/players/115"
+const tatum = "https://www.balldontlie.io/api/v1/players/434"
+const cp3 = "https://www.balldontlie.io/api/v1/players/367"
+const luka = "https://www.balldontlie.io/api/v1/players/132"
 
-const URL = "https://www.balldontlie.io/api/v1/players/666786"
+ const arrayOfURLs = [ja, giannis, jokic, leBron, joel, booker, curry, tatum, cp3, luka];
+
 
 // Cached Elements --------
 
 const $getPlayerInfo = $("#getPlayerInfo");
 const $playerName = $("#playerName");
+const $playerInformation = $("#playerInformation");
 const $playerPosition = $(".position");
 const $playerTeam = $(".team")
 const $playerConference = $(".conference");
@@ -209,22 +211,21 @@ const $form = $("form");
 // get API data (Functions) --------
 
 function getInfo(event) {
+    const randomIndex = Math.floor(Math.random() * arrayOfURLs.length);
+    const randomPlayer = arrayOfURLs[randomIndex];
     event.preventDefault();
-$.ajax(URL).then(function(data) {
-    $("#playerName").text(data.first_name + " " + data.last_name);
-    $(".position").text("Position: " + data.position);
-    $(".team").text("Team: " + data.team.full_name);
-    $(".conference").text("Conference: " + data.team.conference);
-    $(".height").text("Height: " + data.height_feet + "'" + " " + data.height_inches + "'' ");
-    $(".weight").text("Weight: " + data.weight_pounds);
-    // $('#playerDesc').text(description);
+    $.ajax(randomPlayer).then(function(data) {
+        $playerName.text(data.first_name + " " + data.last_name);
+    $playerPosition.text("Position: " + data.position)
+    $playerTeam.text("Team Name: " + data.team.full_name);
+    $playerConference.text("Conference: " + data.team.conference);
+    $playerHeight.text("Height: " + data.height_feet + "'" + " " + data.height_inches + "'' ");
+    $playerWeight.text("Weight: " + data.weight_pounds + " " + "lbs");
+    $playerDesc.text()
     })
 }
+const $img = $("<img>")
 
 // Event Listener --------
-
 $getPlayerInfo.on("click", getInfo);
 $form.on("#button", getInfo);
-
-
-
