@@ -41,6 +41,8 @@ User will be able to pull from a list of 10 players and get their stats and a qu
 * More detailed stats will be shown
 * Better styling for a prettier experience
 
+## <a name="deployment"></a>Deployed Link
+https://jihok0519.github.io/top-10-nba-players
 
 * You can view the repository:
 [Github.com] https://github.com/jihok0519/top-10-nba-players
