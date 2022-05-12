@@ -1,7 +1,7 @@
 # TOP 10 NBA PLAYERS
 
-#### A full crud web app designed to log motorcycle events in Atlnta.
-<img src="./images/Home.png" alt="Home Page Welcome Screen"/>
+#### A web app that displays a player and his info
+
 
 ## Description
 User will be able to pull from a list of 10 players and get their stats and a quick description of the player.
