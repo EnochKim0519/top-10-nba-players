@@ -4,7 +4,7 @@ const jaString = "I rank Ja Morant as my number 1 due to his absurd athleticism 
 
 const curryString = "Considered by many as the greatest 3 point shooter of all time, Curry is a nightmare for any team he goes against. He has broken the record for most 3 pointers in the regular season and in the playoffs. He is also the first ever player to win the MVP award unanimously. Just this past All-Star game, Curry dropped a ridiculous 17 three pointers! In one game! That's 4 more points than the regular season record."
 
-const giannisString = "If Ja Morant wasn't on this list, Giannis Antetokounmpo would be the best player in the NBA right now. Winner of last years NBA finals, he continues to dominate any team that he goes up against. He is the biggest matchup problem the NBA has ever seen. His freakish size and athletcism even warranted him the nickname 'The Greek Freak'. He has gotten even better this year, as he continues to work on his shortcomings, such as his jumpshot."
+const giannisString = "If Ja Morant wasn't on this list, Giannis Antetokounmpo would be the best player in the NBA right now. Winner of last years NBA finals, he continues to dominate any team that he goes up against. He is the biggest matchup problem the NBA has ever seen. His freakish size and athleticism even warranted him the nickname 'The Greek Freak'. He has gotten even better this year, as he continues to work on his shortcomings, such as his jumpshot."
 
 const jokicString = "Nikola Jokic has been lighting it up for the Denver Nuggets ever since his 2nd year on the team. However, I don't think anyone expected him to perform at the level he is right now. Coming into the NBA as the 41st pick in the NBA draft in 2014, he has solidified himself as a top 3 player in the game, winning the last 2 MVP awards back to back."
 
@@ -18,7 +18,7 @@ const tatumString = "Tatum is the one of the most well-rounded player in the NBA
 
 const cp3String = "Chris Paul has always been an amazing point guard. However, I wasn't a big fan of his until recently. I realized that every team he went to, they adopted a winning culture. CP3 is a winner by heart. He, like many other greats, are not afraid of the pressure. His midrange game and court vision is the best in the league. He doesn't just play well himself; he has the ability to make ALL of his teammates shine and thrive. He will go down as one of the best point guards to ever grace the game of basketball."
 
-const lukaString = "Luka Doncic has been an anomaly in the NBA ever since his debut in 2018. He didn't look the most athletic compared to his draft class, which had people speculating if he would ever make it in the NBA. Those critics were quickly shut down. Luka plays the game at HIS speed. It's tough to get him out of his rhythm when he is locked in. His game IQ, shot making, and control make him dangerous. He isn't afraid to launch a bomb from 30 feet away and isn't afraid to get in your face while going for a contested lay up."
+const lukaString = "Luka Doncic has been an anomaly in the NBA ever since his debut in 2018. He didn't look the most athletic compared to his draft class, which had people speculating if he would ever make it in the NBA. Those critics were quickly shut down. Luka plays the game at HIS speed. It's tough to get him out of his rhythm when he is locked in. His game IQ, shot making, and control of the game make him dangerous. He isn't afraid to launch a bomb from 30 feet away and isn't afraid to get in your face while going for a contested lay up."
 
 const ja = "https://www.balldontlie.io/api/v1/players/666786"
 const giannis = "https://www.balldontlie.io/api/v1/players/15"
@@ -32,7 +32,6 @@ const cp3 = "https://www.balldontlie.io/api/v1/players/367"
 const luka = "https://www.balldontlie.io/api/v1/players/132"
 
  const arrayOfURLs = [ja, giannis, jokic, leBron, joel, booker, curry, tatum, cp3, luka];
-
 
 // Cached Elements --------
 
@@ -61,7 +60,7 @@ function getInfo(event) {
     $playerHeight.text("Height: " + data.height_feet + "'" + " " + data.height_inches + "'' ");
     $playerWeight.text("Weight: " + data.weight_pounds + " " + "lbs");
         if (randomPlayer === ja) {
-            $playerDesc.text(jaString); 
+            $playerDesc.text(jaString);
         } else if (randomPlayer === curry) {
             $playerDesc.text(curryString);
         } else if (randomPlayer === giannis) {
@@ -83,7 +82,6 @@ function getInfo(event) {
         }
     })
 }
-
 
 // Event Listener --------
 $getPlayerInfo.on("click", getInfo);
