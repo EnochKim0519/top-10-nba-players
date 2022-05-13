@@ -22,10 +22,6 @@ User will be able to pull from a list of 10 players and get their stats and a qu
 * JQuery
 
 
-## Features
-* Users can run full C.R.U.D. operation on 3 models
-* App pulls information from a 3rd party API.
-
 ## Whiteboard Images
 * All Sketches are on notepad
 
