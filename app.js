@@ -31,7 +31,7 @@ const tatum = "https://www.balldontlie.io/api/v1/players/434"
 const cp3 = "https://www.balldontlie.io/api/v1/players/367"
 const luka = "https://www.balldontlie.io/api/v1/players/132"
 
- const arrayOfURLs = [ja, giannis, jokic, leBron, joel, booker, curry, tatum, cp3, luka];
+const arrayOfURLs = [ja, giannis, jokic, leBron, joel, booker, curry, tatum, cp3, luka];
 
 // Cached Elements --------
 
